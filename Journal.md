@@ -13,5 +13,12 @@
 * HTML-Grundgerüst in VSC erstellen: "html:5
 * HTML-Grundgerüst mit den öffnenden und schließenden Text verstehen
 * Schließende Tags haben einen führenden "/"
-* Title in HTML eibauen
-* Überschrift in THML erstellen 
+* Title in HTML eibauen <h1>...</h1>
+* Überschrift in THML erstelleAbsätze in HTML erstellen: <p>...<p> 
+* 
+
+## 
+* Kommentar in HTML einfügen: <!--Ich bin ein Kommentar-->
+* Repository mit GitHub synchronisieren in einem mehrschrittigen Prozess
+1. DATEI-> AUTOSPEICHERN einschalten bzw. auf Speichern klicken.
+2. in VSC auf das 
