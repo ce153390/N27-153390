@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
-    color: rgba(255, 255, 255, 0.884);
+    color: rgba(255, 0, 0, 0.884);
     
     background-image: url('Katze.JPG');
 }
@@ -10,4 +10,8 @@ body {
     div{
         font-size: xx-small;
         background-color: blueviolet;
+    }
+
+    ul {
+        list-style:  square inside  url("icon.png");
     }
