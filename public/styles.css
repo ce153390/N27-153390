@@ -12,7 +12,7 @@ input {
   button {
     width: 100%;
     background-color: #550b4f;
-    color: white;
+    color: rgb(252, 125, 6);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -24,7 +24,7 @@ input {
   .login {
     width: 100%;
     background-color: rgb(119, 107, 107);
-    color: white;
+    color: rgb(252, 125, 6);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -53,7 +53,7 @@ input {
     background:#550b4f;  
     border-left: 600rem solid rgb(13, 83, 72);
     border-right: 600rem solid rgb(13, 83, 72);
-    color: white;
+    color: rgb(252, 125, 6);
     font-size: 8vw; 
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -70,7 +70,7 @@ input {
       background-color: rgb(119, 107, 107);        
       font-size: 4vw;    
       text-align:center;  
-      color: white;
+      color: rgb(252, 125, 6);
       margin: 0 -601.5rem;  
       padding: .25rem 1.5rem;
       border-left: 600rem solid rgb(13, 83, 72);
@@ -78,7 +78,7 @@ input {
   }
    
   a {  
-    color: white;  
+    color: rgb(252, 125, 6);  
     text-decoration: none;
    }
   
