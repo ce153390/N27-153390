@@ -278,8 +278,9 @@ meineApp.post('/profile',(browserAnfrage, serverAntwort, next) => {
 })
 
 
-require('./Uebungen/ifUndElse.js')
-require('./Uebungen/klasseUndObjekt.js')
+// require('./Uebungen/ifUndElse.js')
+//require('./Uebungen/klasseUndObjekt.js')
+require('./Uebungen/klausur.js')
 
 class Konto{
     constructor(){
@@ -299,12 +300,16 @@ konto.PIN ="123"
 meineApp.get('/kontostandAnzeigen',(browserAnfrage, serverAntwort, next) => {              
 
    
-        serverAntwort.render('kontostandAnzeigen.ejs', {
+    if(browserAnfrage.signedCookies['istAngemeldetAls']){
+        serverAntwort.render('support.ejs', {
             Kontostand: konto.Kontostand,
             IBAN: konto.IBAN,
             Art: konto.Art,
             PIN: konto.PIN
-        }
-        )
+        })
+    }else{
+        serverAntwort.render('login.ejs',{
+            Meldung: ""
+        })
     }              
-)
+})
