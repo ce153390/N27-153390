@@ -1,89 +1,125 @@
-input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 6vw;  
+.rahmen {
+  max-width: 400px;
+  border: 4px solid rgb(119, 107, 107); 
+  border-radius: 5px;      
+  margin: 0 auto
+}
+
+.kopf{
+  padding: 5px;
+  background: #4CAF50;
+}
+
+.navigationsleiste {  
+  font-family: Arial, Helvetica, sans-serif;    
+  background-color: rgb(119, 107, 107);    
+  color: rgb(119, 107, 107);
+  font-size: 2vh;    
+  text-align:center;  
+  margin-bottom: 20px;
+}
+
+.inhaltsbereich{
+  min-height: 470px;
+}
+
+.fusszeile{
+  padding: 2px;
+  background: #4CAF50;
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;  
+  color:white;
+}
+
+input {  
+  width: 80%;
+  margin-bottom: 10px;
+  margin-right: 10%;
+  margin-left: 10%;  
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 2.5vh;
+}
+  
+.login {
+  width: 80%;
+  margin-bottom: 10px;
+  margin-right: 10%;
+  margin-left: 10%;  
+  background-color:darkgray;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 3vh;  
+}
+    
+label {
+  width: 80%;
+  margin-bottom: 10px;
+  margin-right: 10%;
+  margin-left: 10%;        
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5vh;  
+  color:black;
+}
+
+.meldung {
+  width: 80%;
+  margin-bottom: 10px;
+  margin-right: 10%;
+  margin-left: 10%;  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vh;  
+  color: red;
+}
+.erfolgsmeldung {
+  width: 80%;
+  margin-bottom: 10px;
+  margin-right: 10%;
+  margin-left: 10%;  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vh;  
+  color: rgb(26, 146, 15);
+}
+
+.divii {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto
+}
+  
+h1 {  
+  text-align: center;
+  color: white;
+  font-size: 3vh; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+  
+h2 {  
+  color: #4CAF50;  
+  font-size: 2vh; 
+  font-family: Arial, Helvetica, sans-serif;
+  text-align:center;
+}
+  
+a {  
+  color: white;  
+  text-decoration: none;
   }
   
-  button {
-    width: 100%;
-    background-color: #550b4f;
-    color: rgb(252, 125, 6);
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 6vw;  
-  }
-  
-  .login {
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-    color: rgb(252, 125, 6);
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 6vw;  
-  }
-  
-  label {    
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 6vw;  
-    color: rgb(105, 11, 82);
-  }
-  
-  div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    width: 70%;
-    margin: 0 auto
-  }
-  
-  h1 {
-    margin: 0 -601.5rem;  
-    padding: .25rem 1.5rem;
-    background:#550b4f;  
-    border-left: 600rem solid rgb(13, 83, 72);
-    border-right: 600rem solid rgb(13, 83, 72);
-    color: rgb(252, 125, 6);
-    font-size: 8vw; 
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  h2 {  
-    color: #610952;  
-    font-size: 6vw; 
-    font-family: Arial, Helvetica, sans-serif;
-    text-align:center;
-  }
-  
-  nav {  
-    font-family: Arial, Helvetica, sans-serif;    
-      background-color: rgb(0, 0, 0);        
-      font-size: 4vw;    
-      text-align:center;  
-      color: rgb(252, 125, 6);
-      margin: 0 -601.5rem;  
-      padding: .25rem 1.5rem;
-      border-left: 600rem solid rgb(13, 83, 72);
-      border-right: 600rem solid rgb(13, 83, 72);
-  }
-   
-  a {  
-    color: rgb(252, 125, 6);  
-    text-decoration: none;
-   }
-  
-   p {
-    color: red;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3vw; 
-   }
+.schaltflaeche {
+  color: rgb(31, 3, 151);
+  text-decoration: none;
+}
+
+p {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5vh; 
+}
