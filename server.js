@@ -1,3 +1,18 @@
+class Kredit{
+    constructor(){
+        this.Zinssatz
+        this.Laufzeit
+        this.Betrag
+    }
+
+    // Eine Funktion berechnet etwas. Im Namen der Funktion steht also immer ein Verb.
+
+    berechneGesamtkostenKreditNachEinemJahr(){
+        return this.Betrag * this.Zinssatz / 100 + this.Betrag
+    }
+}
+
+
 // Programme verarbeiten oft Objekte der realen Welt. Objekte haben 
 // Eigenschaften. In unserem Bankingprogramm interessieren uns Objekte,
 // wie z.B. Kunde, Konto, Filiale, Bankautomat, ...
@@ -40,7 +55,6 @@ class Kundenberater{
         this.Mail
         this.Rufnummer
         this.Begruessung
-        this.Alter
     }
 }
 
@@ -57,8 +71,43 @@ kundenberater.Mail = "zimmermann@n27.com"
 kundenberater.Rufnummer = "+49123/4567890"
 kundenberater.Begruessung = "Hallo, ich bin's, Dein Kundenberater!"
 kundenberater.Position = "Master of desaster"
-kundenberater.Alter = "26"
 
+// Die Klasse Konto ist der Bauplan für alle konto-Objekte.
+// In der Klasse werden alle relevanten Eigenschaften definiert.
+// Die konto-Objekte, die aus dieser Klasse erzeugt werden, haben die selben
+// Eigenschaften, aber unterschiedliche Eigenschaftswerte.
+
+class Konto{
+    constructor(){
+
+        // Die relevanten Eigenschaften werden im Konstruktor aufgelistet.
+        // Eigenschaften werden immer großgeschrieben        
+
+        this.Kontostand
+        this.IBAN
+        this.Kontoart
+        this.Pin
+    }
+}
+
+// Instanzierung eines Objekts namens konto vom Typ Konto
+// "let konto" bedeutet, dass ein Objekt namens konto exisitieren soll. Man sagt,
+// das konto wird deklariert.
+
+// "= new Konto()" nennt man die instanziierung. Bei der Instanziierung wird Festplatten-
+// speicher reserviert, um bei der anschließenden Initialisierung konkrete Eigenschafts-
+// werte für das Objekt zu speichern.
+
+let konto = new Konto()
+
+// Bei der Initialisierung werden konkrete Eigenschaftswerte in die reservierten Speicher-
+// zellen geschrieben.
+
+// Die Zuweisung von Eigenschaftswerten geschieht immer von rechts nach links.
+
+konto.IBAN = "DE1234567890123456"
+konto.Kontostand = 1000000
+konto.Kontoart = "Giro"
 
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -207,8 +256,20 @@ meineApp.get('/support',(browserAnfrage, serverAntwort, next) => {
             Mail: kundenberater.Mail,
             Rufnummer: kundenberater.Rufnummer,
             Begruessung: kundenberater.Begruessung,
-            Position: kundenberater.Position,
-            Alter: kundenberater.Alter,
+            Position: kundenberater.Position
+        })
+    }else{
+        serverAntwort.render('login.ejs',{
+            Meldung: ""
+        })
+    }              
+})
+
+meineApp.get('/kreditBerechnen',(browserAnfrage, serverAntwort, next) => {              
+
+    if(browserAnfrage.signedCookies['istAngemeldetAls']){
+        serverAntwort.render('kreditBerechnen.ejs', {
+            
         })
     }else{
         serverAntwort.render('login.ejs',{
@@ -277,39 +338,39 @@ meineApp.post('/profile',(browserAnfrage, serverAntwort, next) => {
     })
 })
 
-
-// require('./Uebungen/ifUndElse.js')
-//require('./Uebungen/klasseUndObjekt.js')
-require('./Uebungen/klausur.js')
-
-class Konto{
-    constructor(){
-        this.Kontostand
-        this.IBAN
-        this.Art
-        this.PIN
-    }
-}
-let konto = new Konto()
-
-konto.Kontostand = 0.5
-konto.IBAN = "DE45632147898456321458"
-konto.Art = "Giro"
-konto.PIN ="123"
+// Sobald der Button "Kontostand anzeigen" auf der index-Seite gedrückt wird, 
+// wird die meineApp.get('/kontostandAnzeigen'-Funktion abgearbeitet.
 
 meineApp.get('/kontostandAnzeigen',(browserAnfrage, serverAntwort, next) => {              
+    
+    // Wenn ein signierter Cookie mit Namen 'istAngemeldetAls' im Browser vorhanden ist,
+    // dann ist die Prüfung WAHR und die Anweisungen im Rumpf der if-Kontrollstruktur 
+    // werden abgearbeitet.
 
-   
     if(browserAnfrage.signedCookies['istAngemeldetAls']){
-        serverAntwort.render('support.ejs', {
+        
+
+
+        // Die Index-Seite wird an den Browser gegeben:
+
+        serverAntwort.render('kontostandAnzeigen.ejs',{
             Kontostand: konto.Kontostand,
             IBAN: konto.IBAN,
-            Art: konto.Art,
-            PIN: konto.PIN
+            Kontoart: konto.Kontoart,
+            Erfolgsmeldung: ""
         })
     }else{
-        serverAntwort.render('login.ejs',{
+
+        // Wenn der Kunde noch nicht eigeloggt ist, soll
+        // die Loginseite an den Browser zurückgegeben werden.
+
+        serverAntwort.render('login.ejs', {
             Meldung: ""
         })
-    }              
+    }                 
 })
+
+
+//require('./Uebungen/ifUndElse.js')
+//require('./Uebungen/klasseUndObjekt.js')
+require('./Klausuren/20221026_klausur.js')
