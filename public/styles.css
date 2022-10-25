@@ -7,7 +7,7 @@
 
 .kopf{
   padding: 5px;
-  background: #021855;
+  background: #4CAF50;
 }
 
 .navigationsleiste {  
@@ -21,11 +21,12 @@
 
 .inhaltsbereich{
   min-height: 470px;
+  color: #4CAF50;
 }
 
 .fusszeile{
   padding: 2px;
-  background: #021855;
+  background: #4CAF50;
   text-align: right;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5em;  
@@ -76,6 +77,7 @@ label {
   font-size: 2vh;  
   color: red;
 }
+
 .erfolgsmeldung {
   width: 80%;
   margin-bottom: 10px;
@@ -83,9 +85,9 @@ label {
   margin-left: 10%;  
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2vh;  
-  color: rgb(26, 146, 15);
+  color: green;
 }
-
+  
 .divii {
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -111,15 +113,26 @@ h2 {
 a {  
   color: white;  
   text-decoration: none;
-  }
-  
-.schaltflaeche {
-  color: rgb(31, 3, 151);
-  text-decoration: none;
 }
 
+.schaltflaeche {  
+  color: blue;  
+  text-decoration: none;
+}
+  
 p {
   color: red;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5vh; 
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
