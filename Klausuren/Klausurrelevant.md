@@ -1,9 +1,17 @@
-# Klausur am 26.10.2022
+# Klausur am 15.03.2023
 
-1. Fragen zu Datenschutz und / oder Datensicherheit
+Ein lauffähiges Projekt wird über GitHub ausgeteilt
+Das Projekt enthält keine Kommentare
 
-2. If & Else, auch verschaltelt
+Mögliche Aufgaben:
 
-3. Für ein Objekt müssen relevante Eigenschaften gefunden werden. Deklaration, Instanziierung, Initialisierung müssen durchgeführt und verstanden werden
+* Einzelne Zeilen mit Kommentaren beschreiben. Also was passiert in der Zeile ...
 
-4. In der N27-App muss eine neue Seite nach Aufgabe hinzugefügt werden. Die Seite muss durch Klick auf das vorgegebene 
+* Es soll eine neue Seite angelegt werden mit einem Formular. Bei Klick auf den 
+Button sollen Werte eingelesen werden und
+gegebenenfalls auch in die Datenbank geschrieben werden.
+
+* Es soll auch etwas mit If&Else (auch verschachtelt) programmiert werden
+
+* Wenn ein bestimmter Button geklickt wird, bzw. eine bestimmte Seite aufgerufen wird, dann kommt es zu einer Fehlermeldung. 
+Der Fehler muss korrigiert werden.
